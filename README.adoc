@@ -10,7 +10,7 @@
 
 These are some scripts I use to create, configure, & run various databases on my local machine for live-coding sessions and for the databases chapter (Chapter 6 of my book, link:https://bit.ly/springbootbook[Spring Boot: Up and Running]).
 
-NOTE: This should be obvious, but these scripts/configurations are *not* intended to be "enterprise grade" and as such, should *not* be used for production loads! Use them at your own risk. They work great for development and demos, though.
+WARNING: This should be obvious, but these scripts/configurations are *not* intended to be "enterprise grade" and as such, should *not* be used for production loads! Use them at your own risk. They work great for development and demos, though.
 
 Here is the general order of things to set it up like I use it:
 
