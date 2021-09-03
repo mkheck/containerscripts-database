@@ -1,0 +1,27 @@
+= Container scripts to create/run databases locally
+
+== Maintainer
+
+* Mark Heckler
+* mailto:mark.heckler@gmail.com[mark.heckler@gmail.com]
+* https://twitter.com/mkheck[@mkheck on Twitter]
+
+== Purpose
+
+These are some scripts I use to create, configure, & run various databases on my local machine for live-coding sessions.
+
+NOTE: This should be obvious, but these scripts/configurations are *not* intended to be "enterprise grade" and used for production loads! Use them at your own risk. They work great for development and demos, though.
+
+Here is the general order of things to set it up like I use it:
+
+. Install Docker Desktop or similar container execution environment on your machine
+. `git clone` this repo (or fork, then clone, etc.)
+. Start your preferred container runtime
+. Create the various images & start the associated containers (this must only be done once)
+.. Run the `run<choose_your_database>.sh` script to create a local database image (of your choice) & run the container
+.. To shut down after the initial run, simply use the apppropriate "stop command" of your container runtime, e.g. `docker stop <my_container_name>`
+. For subsequent startup/shutdown of these containers, simply run the corresponding "start command of your container runtime, e.g. `docker start <my_container_name>` & `docker stop <my_container_name` to start/stop
+
+NOTE: For each of these databases, I map a container directory to an external directory to hold the persisted data. This is so the database isn't empty with subsequent database creation/startup cycles (upgrades, etc.) and so it can be backed up independently of the container(s). You will need to edit this path in the `run<choose_your_database>.sh` script for proper operation.
+
+Please star and watch this repo to be notified of updates. Thanks!
